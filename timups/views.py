@@ -1,3 +1,4 @@
+from django.http.response import HttpResponse
 from timups.models import  banners, watches
 from django.shortcuts import render
 
@@ -8,3 +9,6 @@ def index(request):
     ban = banners.objects.all()
       
     return render(request, 'index.html', {'watchs': watchs, 'ban': ban})
+
+def register(request):
+    return HttpResponse(request, "register.html")
