@@ -15,3 +15,10 @@ def register(request):
 
 def contact(request):
     return render(request, "contact.html")
+
+def watchPage(request):
+    watchNew = watches.objects.all()
+    return render(request, "watches.html", {'watchNew': watchNew})
+
+def about(request):
+    return render(request, "about.html")
