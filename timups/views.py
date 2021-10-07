@@ -11,4 +11,7 @@ def index(request):
     return render(request, 'index.html', {'watchs': watchs, 'ban': ban})
 
 def register(request):
-    return HttpResponse(request, "register.html")
+    return render(request, "register.html")
+
+def contact(request):
+    return render(request, "contact.html")
